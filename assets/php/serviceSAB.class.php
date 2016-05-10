@@ -32,7 +32,7 @@ class serviceSAB
 	function makeButton()
 	{
 		global $sabnzbd_api;
-		$sabnzbdXML = simplexml_load_file('http://127.0.0.1:7878/api?mode=qstatus&output=xml&apikey='.$sabnzbd_api);
+		$sabnzbdXML = simplexml_load_file('http://192.168.88.55:8080/api?mode=qstatus&output=xml&apikey='.$sabnzbd_api);
 
 		if (($sabnzbdXML->state) == 'Downloading'):
 			$icon = '<i class="icon-' . ($this->status ? 'download-alt' : 'remove') . ' icon-white"></i>';
