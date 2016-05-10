@@ -282,7 +282,7 @@ function getNetwork() //returns wan_domain if you are outside your network, and 
 	global $local_pfsense_ip;
 	global $wan_domain;
 	$clientIP = get_client_ip();
-	if(preg_match("/192.168.1.*/",$clientIP))
+	if(preg_match("/192.168.88.*/",$clientIP))
 		$network='http://'.$local_server_ip;
 	else
 		$network=$wan_domain;
