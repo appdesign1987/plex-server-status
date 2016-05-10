@@ -24,8 +24,8 @@ endif;
 
 $services = array(
 	new service("Plex", 32400, "http://couch.jeroenvd.nl:32400/web/index.html#!/dashboard"),
-	new service("Donald", 8006, "https://192.168.1.200:8006"),
-	new service("Dagobert", 8006, "https://192.168.1.81:8006"),
+	new service("Donald", 8006, "http://192.168.1.200:8006"),
+	new service("Dagobert", 8006, "http://192.168.1.81:8006"),
 	new serviceSAB($sabTitle, 8080, "http://couch.jeroenvd.nl:8080"),
 	new service("Deluge", 8112, "http://couch.jeroenvd.nl:8112"),
 	new service("CouchPotato", 5050, "http://couch.jeroenvd.nl:5050")
