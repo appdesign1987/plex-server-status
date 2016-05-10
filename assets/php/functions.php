@@ -635,7 +635,7 @@ function getPlexToken()
 
 function getDir($b)
 {
-   $dirs = array('N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'N');
+   $dirs = array('N', 'NO', 'O', 'ZO', 'Z', 'ZW', 'W', 'NW', 'N');
    return $dirs[round($b/45)];
 }
 
@@ -644,7 +644,7 @@ function makeWeatherSidebar()
     global $weather_lat;
 	global $weather_long;
 	global $forecast_api;
-	$forecastExcludes = '?exclude=daily,flags&units=si';
+	$forecastExcludes = '?exclude=daily,flags&units=si&lang=nl';
 	// Kennington, London
 	$forecastLat = $weather_lat;
 	$forecastLong = $weather_long;
