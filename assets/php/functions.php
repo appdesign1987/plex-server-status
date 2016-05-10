@@ -1,6 +1,6 @@
 <?php
 
-	$config_path = "/var/www-credentials/config.ini"; //path to config file, recommend you place it outside of web root
+	$config_path = "/home/jeroen/config.ini"; //path to config file, recommend you place it outside of web root
 	
 	Ini_Set( 'display_errors', false);
 	include("lib/phpseclib0.3.5/Net/SSH2.php");
@@ -635,7 +635,7 @@ function getPlexToken()
 
 function getDir($b)
 {
-   $dirs = array('N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'N');
+   $dirs = array('N', 'NO', 'O', 'ZO', 'Z', 'ZW', 'W', 'NW', 'W');
    return $dirs[round($b/45)];
 }
 
@@ -644,7 +644,7 @@ function makeWeatherSidebar()
     global $weather_lat;
 	global $weather_long;
 	global $forecast_api;
-	$forecastExcludes = '?exclude=daily,flags&units=si';
+	$forecastExcludes = '?exclude=flags&units=si&lang=nl';
 	// Kennington, London
 	$forecastLat = $weather_lat;
 	$forecastLong = $weather_long;
@@ -694,13 +694,13 @@ function makeWeatherSidebar()
 	echo '<li><h4 class="exoregular" style="margin:0px;padding-right:10px;width:80px">'.$currentSummary.'</h4></li>';
 	echo '</ul></li>';
 	echo '</ul>';
-	//if ($currentWindSpeed > 0) {
-	//	$direction = getDir($currentWindBearing);
-	//	echo '<h4 class="exoextralight" style="margin-top:0px">Wind: '.$currentWindSpeed.' mph ('.$direction.')</h4>';
-	//}
-	echo '<h4 class="exoregular">Next Hour</h4>';
+	if ($currentWindSpeed > 0) {
+		$direction = getDir($currentWindBearing);
+		echo '<h4 class="exoextralight" style="margin-top:0px">Wind: '.$currentWindSpeed.' kmh ('.$direction.')</h4>';
+	}
+	echo '<h4 class="exoregular">Volgend uur</h4>';
 	echo '<h5 class="exoextralight" style="margin-top:10px">'.$minutelySummary.'</h5>';
-	echo '<h4 class="exoregular">Next 24 Hours</h4>';
+	echo '<h4 class="exoregular">Komende 24uur</h4>';
 	echo '<h5 class="exoextralight" style="margin-top:10px">'.$hourlySummary.'</h5>';
 	echo '<p class="text-right no-link-color"><small><a href="http://forecast.io/#/f/',$forecastLat,',',$forecastLong,'">Forecast.io</a></small></p>';
 }
