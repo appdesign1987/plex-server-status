@@ -13,7 +13,7 @@
 	        });
 	</script>
 <?php 
-$sabnzbdXML = simplexml_load_file('http://127.0.0.1:7878/api?mode=qstatus&output=xml&apikey='.$sabnzbd_api);
+$sabnzbdXML = simplexml_load_file('http://couch.jeroenvd.nl:8080/api?mode=qstatus&output=xml&apikey='.$sabnzbd_api);
 
 if (($sabnzbdXML->state) == 'Downloading'):
 	$timeleft = $sabnzbdXML->timeleft;
@@ -23,13 +23,14 @@ else:
 endif;
 
 $services = array(
-	new service("Plex", 32400, "http://dashbad.com:32400/web/index.html#!/dashboard"),
-	new service("pfSense", 80, "http://192.168.1.1", "192.168.1.1"),
-	new serviceSAB($sabTitle, 7878, "http://dashbad.com:7878", "127.0.0.1:7878"),
-	new service("SickBeard", 8081, "http://dashbad.com:8081"),
-	new service("CouchPotato", 5050, "http://dashbad.com:5050"),
+	new service("Plex", 32400, "http://couch.jeroenvd.nl:32400/web/index.html#!/dashboard"),
+	new service("Donald", 8006, "https://192.168.1.200:8006"),
+	new service("Dagobert", 8006, "https://192.168.1.81:8006"),
+	new serviceSAB($sabTitle, 8080, "http://couch.jeroenvd.nl:8080"),
+	new service("Deluge", 8112, "http://couch.jeroenvd.nl:8112"),
+	new service("CouchPotato", 5050, "http://couch.jeroenvd.nl:5050"),
 	#new service("Transmission", 9091, "http://d4rk.co:9091"),
-	new service("Subsonic",4040, "http://dashbad.com:4040")
+	//new service("Subsonic",4040, "http://dashbad.com:4040")
 	
 );
 ?>
