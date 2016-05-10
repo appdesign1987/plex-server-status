@@ -28,7 +28,7 @@ $services = array(
 	new service("Dagobert", 8006, "https://192.168.1.81:8006"),
 	new serviceSAB($sabTitle, 8080, "http://couch.jeroenvd.nl:8080"),
 	new service("Deluge", 8112, "http://couch.jeroenvd.nl:8112"),
-	new service("CouchPotato", 5050, "http://couch.jeroenvd.nl:5050"),
+	new service("CouchPotato", 5050, "http://couch.jeroenvd.nl:5050")
 	#new service("Transmission", 9091, "http://d4rk.co:9091"),
 	//new service("Subsonic",4040, "http://dashbad.com:4040")
 	
