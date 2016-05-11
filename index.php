@@ -184,7 +184,7 @@
 
 			        	var refreshIdslow = setInterval(function(){
 			            	$disk_space_refresh.load('assets/php/disk_space_ajax.php');
-			            	$system_ram_refresh.load('assets/php/system_ram_ajax.php');
+			            	$system_ram_refresh.load('assets/php/system_ram_ajax.php')
 			          //  	$zfs_refresh.load("assets/php/zfs_ajax.php");
 			          //	$plex_movie_stats_refresh.load("assets/php/plex_movie_stats_ajax.php")
 			        	}, 300000); // 5 minutes
@@ -242,7 +242,7 @@
 					}
 					now_playing.style.height = ((height - now_playing.offsetTop) + "px");
 					console.log("Div resize complete. New size is: " + height);
-*/				};
+				};*/
 
 				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 					// some code..
