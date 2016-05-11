@@ -348,13 +348,13 @@
 								</div>
 							</div>
 							<div class="panel panel-default">
-						/*	<div class="panel-heading">
+							<div class="panel-heading">
 									<h4 class="panel-title exoextralight">
-										Plex library
+										Hier komt nog wat
 									</h4>
 									</div>	
 									<div id="plex_movie_stats"></div>
-						*/</div>
+						</div>
 					</div>
 				</div>
 			</div>
