@@ -340,10 +340,10 @@
 									<h4 class="exoextralight">Memory</h4>
 									<div id="system_ram" style="height:40px"></div>
 									<hr>
-									<h4 class="exoextralight">Disk space</h4>
+									<h4 class="exoextralight">Local Disk space</h4>
 									<div id="disk_space"></div>
 									<hr>
-									<h4 class="exoextralight">ZPool info</h4>
+									<h4 class="exoextralight">Other Disks</h4>
 									<div id="zfs"></div>
 								</div>
 							</div>
