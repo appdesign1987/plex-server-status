@@ -10,17 +10,17 @@
 	$local_server_ip = $config['network']['local_server_ip'];
 	$pfsense_if_name = $config['network']['pfsense_if_name'];
 	$wan_domain = $config['network']['wan_domain'];
-	$plex_server_ip = $config['network']['plex_server_ip'];
+	//$plex_server_ip = $config['network']['plex_server_ip'];
 	$ssh_username = $config['credentials']['ssh_username'];
 	$ssh_password = $config['credentials']['ssh_password'];
-	$plex_username = $config['credentials']['plex_username'];
-	$plex_password = $config['credentials']['plex_password'];
+	//$plex_username = $config['credentials']['plex_username'];
+	//$plex_password = $config['credentials']['plex_password'];
 	$forecast_api = $config['api_keys']['forecast_api'];
 	$sabnzbd_api = $config['api_keys']['sabnzbd_api'];
 	$weather_lat = $config['misc']['weather_lat'];
 	$weather_long = $config['misc']['weather_long'];
-	$plex_port = $config['network']['plex_port'];
-	$zpools = $config['zpools'];
+	//$plex_port = $config['network']['plex_port'];
+	//$zpools = $config['zpools'];
 	$filesystems = $config['filesystems'];
 
 	// Set the path for the Plex Token
@@ -135,7 +135,7 @@ function getDiskspaceUsed($dir)
 	return $du;
 }
 
-function zpoolHealth($name) //returns status of provided zpool
+/*function zpoolHealth($name) //returns status of provided zpool
 {
 	$zpool = shell_exec('/sbin/zpool status '.$name);
         $findme = 'state:';
@@ -195,7 +195,7 @@ function printZpools()
 			echo '</div>';
 		
 	}
-}
+}*/
 
 
 function getLoad($id)
@@ -339,7 +339,7 @@ function get_client_ip()
 #	echo '</div>';
 #}
 
-function makeRecenlyReleased()
+/*function makeRecenlyReleased()
 {
 	global $plex_port;
 	global $plex_server_ip;
@@ -403,9 +403,9 @@ function makeRecenlyReleased()
 	//	echo '<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=40.7838&lon=-96.622773&name=Lincoln, NE"> </iframe>';
 	//}
 	echo '</div>'; // Close column div
-}
+}*/
 
-function makeNowPlaying()
+/*function makeNowPlaying()
 {
 	global $plex_server_ip;
 	global $plex_port;
@@ -471,9 +471,9 @@ function makeNowPlaying()
 		endforeach;
 		echo '</div>';
 	endif;
-}
+}*/
 
-function plexMovieStats()
+/*function plexMovieStats()
 {
 	global $plex_port;
 	global $plex_server_ip;
@@ -561,7 +561,7 @@ function plexMovieStats()
 	echo '</tr>';
 	echo '</table>';
 	echo '</div>';
-}
+}*/
 
 function makeBandwidthBars()
 {
@@ -623,7 +623,7 @@ function printBandwidthBar($percent, $name = "", $Mbps)
 }
 
 
-function getPlexToken()
+/*function getPlexToken()
 {
     global $plex_username;
 	global $plex_password;
@@ -631,7 +631,7 @@ function getPlexToken()
         $myPlex_xml = simplexml_load_string($myPlex);
         $token = $myPlex_xml['authenticationToken'];
 	return $token;
-}
+}*/
 
 function getDir($b)
 {
