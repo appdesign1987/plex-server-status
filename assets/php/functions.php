@@ -1,6 +1,6 @@
 <?php
 
-	$config_path = "/home/jeroen/config.ini"; //path to config file, recommend you place it outside of web root
+	$config_path = "/home/jeroen/config.bak.2"; //path to config file, recommend you place it outside of web root
 	
 	Ini_Set( 'display_errors', false);
 	include("lib/phpseclib0.3.5/Net/SSH2.php");
