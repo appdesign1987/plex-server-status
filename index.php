@@ -353,13 +353,12 @@
 										Hier komt nog wat
 									</h4>
 									</div>	
-									<div id="plex_movie_stats"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Invisible php div-->
-		<div id="plex_check"></div>
+		
 		</body>
 </html>
