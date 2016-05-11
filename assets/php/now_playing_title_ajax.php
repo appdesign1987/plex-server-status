@@ -7,14 +7,14 @@
 	// You will only notice the scrolling feature when there are multiple
 	// shows being watched at the same time.
 	
-	$plexSessionXML = simplexml_load_file($plex_server_ip.'/status/sessions');
+	//$plexSessionXML = simplexml_load_file($plex_server_ip.'/status/sessions');
 
-	if (count($plexSessionXML->Video) == 0):
-		$title = 'Recently Added';
+/*	if (count($plexSessionXML->Video) == 0):
+		$title = 'Jeroenvd.nl - Dashboard';
 	else:
 		$title = 'Now Playing';
-	endif;
+	endif;*/
 
-	echo '<h1 class="exoextralight">'.$title.'</h1>';
+	echo '<h1 class="exoextralight">Jeroenvd.nl - Dashboard</h1>';
 	echo '<hr>';
 ?>
