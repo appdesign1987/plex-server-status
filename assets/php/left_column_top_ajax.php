@@ -4,6 +4,5 @@
 	include("functions.php");
 		
 		makeWeatherSidebar();
-		//plexMovieStats();
 	
 ?>
