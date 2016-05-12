@@ -23,6 +23,13 @@
 		<style type="text/css">
 			body {
 				text-align: center;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
+background: #d4e4ef; /* Old browsers */
+background: -moz-linear-gradient(top,  #d4e4ef 0%, #86aecc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #d4e4ef 0%,#86aecc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #d4e4ef 0%,#86aecc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=0 ); /* IE6-9 */
+
 			}
 			.center {
 				margin-left:auto;
